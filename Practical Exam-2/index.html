@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>Recipe Book</h1>
+        <form id="recipeForm">
+            <input type="text" id="title" placeholder="Recipe Title" required>
+            <input type="text" id="ingredients" placeholder="Ingredients" required>
+            <textarea id="instructions" placeholder="Instructions"></textarea>
+            <input type="text" id="cuisine" placeholder="Cuisine Type">
+            <button type="submit">Add Recipe</button>
+        </form>
+        
+        <h2>Recipes</h2>
+        <input type="text" id="search" placeholder="Search Recipes..." onkeyup="searchRecipes()">
+        <select id="filter" onchange="filterRecipes()">
+            <option value="">Filter by Cuisine</option>
+        </select>
+        <div id="recipesList"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
